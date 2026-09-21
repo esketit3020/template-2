@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { business } from "@/lib/business";
-import { ArrowRightIcon, PhoneIcon, AlertIcon } from "@/components/Icons";
+import { ArrowRightIcon, PhoneIcon } from "@/components/Icons";
 
 export default function NotFound() {
   return (
@@ -33,13 +33,6 @@ export default function NotFound() {
                 {business.phone.office.display}
               </a>
               .
-            </p>
-            <p className="mt-2 text-xs text-urgent-700 font-medium flex items-center justify-center gap-1.5">
-              <AlertIcon className="h-4 w-4 shrink-0" />
-              Active roof leak? Call the 24/7 storm line:{" "}
-              <a href={business.phone.emergency.href} className="underline font-bold">
-                {business.phone.emergency.display}
-              </a>
             </p>
           </div>
         </div>

@@ -8,11 +8,11 @@
 
 import Link from "next/link";
 import { services } from "@/lib/services";
-import { ServiceIcon, ArrowRightIcon, AlertIcon } from "./Icons";
+import { ServiceIcon, ArrowRightIcon } from "./Icons";
 
 export function ServicesGrid({
   heading = "What we do",
-  intro = "Eight services, each with its own page — so you can read exactly what is included and what it costs before you ring anyone.",
+  intro = "Seven services, each with its own page — so you can read exactly what is included and what it costs before you ring anyone.",
   showAllLink = true,
 }: {
   heading?: string;
@@ -40,12 +40,6 @@ export function ServicesGrid({
                     name={s.icon}
                     className="h-10 w-10 shrink-0 text-ember-500 transition-transform group-hover:scale-110"
                   />
-                  {s.urgent && (
-                    <span className="chip bg-urgent-600/10 text-urgent-700">
-                      <AlertIcon className="h-3.5 w-3.5" />
-                      24/7
-                    </span>
-                  )}
                 </span>
 
                 <h3 className="h-card mt-4 text-ink-900">{s.shortName}</h3>

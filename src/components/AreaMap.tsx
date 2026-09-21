@@ -186,7 +186,7 @@ export function AreaMap({ className = "" }: { className?: string }) {
         <rect width="184" height="68" rx="5" fill="#ffffff" stroke="#d6dfe6" strokeWidth="1" />
         <circle cx="16" cy="18" r="6" fill="#c9552b" />
         <text x="30" y="21.5" fill="#2a4152" fontSize="10.5" fontFamily="system-ui, sans-serif">
-          Depot — 4hr storm response
+          Woolloongabba roofing depot
         </text>
         <circle cx="16" cy="38" r="4.5" fill="#14202b" />
         <text x="30" y="41.5" fill="#2a4152" fontSize="10.5" fontFamily="system-ui, sans-serif">

@@ -1,6 +1,6 @@
 /**
  * Onboarding §4: "Services list with descriptions (per service, not one blob)".
- * Design SOP §4 row 4 requires 4–8 tiles linking to dedicated pages — we have 8.
+ * Design SOP §4 row 4 requires 4–8 tiles linking to dedicated pages — we have 7.
  *
  * Pricing follows the client's hybrid decision (onboarding §4): "from" pricing on
  * repairs, restoration, painting, guttering and ventilation; quote-only on
@@ -38,7 +38,6 @@ export type IconName =
   | "restoration"
   | "replacement"
   | "repair"
-  | "storm"
   | "gutter"
   | "paint"
   | "metal"

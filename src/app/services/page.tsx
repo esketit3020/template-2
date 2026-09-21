@@ -3,7 +3,7 @@ import Link from "next/link";
 import { services } from "@/lib/services";
 import { business, yearsTrading } from "@/lib/business";
 import { PageHeader, QuoteCta, TrustStrip } from "@/components/Blocks";
-import { ServiceIcon, ArrowRightIcon, CheckIcon, ClockIcon, ShieldIcon, AlertIcon } from "@/components/Icons";
+import { ServiceIcon, ArrowRightIcon, CheckIcon, ClockIcon, ShieldIcon } from "@/components/Icons";
 import { breadcrumbSchema, jsonLdProps } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="Our Services"
         title="Roofing services on the Brisbane southside, done once and done properly."
-        intro={`Eight dedicated services, all delivered by employed Ironbark tradespeople — never subbies. From $340 leak repairs to complete tile-to-Colorbond transformations, backed by ${yearsTrading()} years of local experience.`}
+        intro={`Seven dedicated services, all delivered by employed Ironbark tradespeople — never subbies. From $340 leak repairs to complete tile-to-Colorbond transformations, backed by ${yearsTrading()} years of local experience.`}
         breadcrumbs={breadcrumbs}
       >
         <TrustStrip className="mt-8 text-ink-300" />
@@ -49,17 +49,10 @@ export default function ServicesPage() {
                       />
                       <h2 className="h-card text-ink-900">{s.name}</h2>
                     </span>
-                    {s.urgent ? (
-                      <span className="chip shrink-0 bg-urgent-600/10 text-urgent-700">
-                        <AlertIcon className="h-3.5 w-3.5" />
-                        Roof Repairs
-                      </span>
-                    ) : (
-                      <span className="chip shrink-0 bg-ink-100 text-ink-700">
-                        <ShieldIcon className="h-3.5 w-3.5 text-ember-600" />
-                        {s.warrantyYears}-yr warranty
-                      </span>
-                    )}
+                    <span className="chip shrink-0 bg-ink-100 text-ink-700">
+                      <ShieldIcon className="h-3.5 w-3.5 text-ember-600" />
+                      {s.warrantyYears}-yr warranty
+                    </span>
                   </div>
 
                   <p className="mt-4 text-[1rem] leading-relaxed text-ink-700">
