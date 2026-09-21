@@ -12,6 +12,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { projects, projectFilters } from "@/lib/projects";
 import { RoofPlate } from "./RoofPlate";
+import { servicePhotos } from "@/lib/demoPhotos";
 import { ArrowRightIcon, ClockIcon, MapPinIcon } from "./Icons";
 
 export function Gallery({
@@ -36,7 +37,7 @@ export function Gallery({
             <p className="eyebrow">Recent projects</p>
             <h2 className="h-section mt-3">{heading}</h2>
             <p className="lede mt-4">
-              Real jobs, named suburbs, and the detail that made each one non-obvious. Value bands
+              Example job descriptions with licensed preview photography (not photos of the named jobs). Replace these with real client projects before publishing. Value bands
               rather than exact prices — every roof is different, and we would rather quote yours
               than have you compare it to someone else&rsquo;s.
             </p>
@@ -86,12 +87,22 @@ export function Gallery({
                       className="h-full w-full object-cover"
                     />
                   ) : (
-                    <RoofPlate
-                      hue={p.plate.hue}
-                      profile={p.plate.profile}
-                      label={`${p.serviceName} in ${p.suburb}`}
-                      className="h-full w-full"
-                    />
+                    <>
+                      {servicePhotos[p.serviceSlug] && (
+                        <div className="photo-only gallery-example-photo relative h-full w-full">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={servicePhotos[p.serviceSlug].src}
+                            alt={`Illustrative photography: ${servicePhotos[p.serviceSlug].alt}. Not the named job.`}
+                            loading="lazy" decoding="async" width={640} height={360}
+                            className="h-full w-full object-cover" />
+                          <span className="absolute bottom-2 left-2 rounded bg-ink-950/90 px-2.5 py-1 text-xs text-white">Example photo · not this job</span>
+                        </div>
+                      )}
+                      <div className="illustration-only gallery-illustration h-full w-full">
+                        <RoofPlate hue={p.plate.hue} profile={p.plate.profile}
+                          label={`${p.serviceName} in ${p.suburb}`} className="h-full w-full" />
+                      </div>
+                    </>
                   )}
                 </div>
 

@@ -78,7 +78,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-AU" className={`${inter.variable} ${barlowCondensed.variable}`}>
+    <html lang="en-AU" data-site-media="photos" className={`${inter.variable} ${barlowCondensed.variable}`}>
       <head>
         {/* Site-wide LocalBusiness + WebSite schema (build checklist §2). */}
         <script {...jsonLdProps(organisationSchema())} />

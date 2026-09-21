@@ -8,6 +8,7 @@
 
 import Link from "next/link";
 import { services } from "@/lib/services";
+import { servicePhotos } from "@/lib/demoPhotos";
 import { ServiceIcon, ArrowRightIcon } from "./Icons";
 
 export function ServicesGrid({
@@ -33,8 +34,18 @@ export function ServicesGrid({
             <li key={s.slug}>
               <Link
                 href={`/services/${s.slug}`}
-                className="card card-hover group flex h-full flex-col p-6"
+                className="card card-hover group flex h-full flex-col overflow-hidden"
               >
+                {servicePhotos[s.slug] && (
+                  <div className="photo-only relative aspect-[16/10] overflow-hidden bg-ink-100">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={servicePhotos[s.slug].src} alt={servicePhotos[s.slug].alt}
+                      loading="lazy" decoding="async" width={600} height={375}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <span className="absolute bottom-2 left-2 rounded bg-ink-950/85 px-2 py-1 text-xs text-white">Illustrative photo</span>
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-6">
                 <span className="flex items-start justify-between gap-3">
                   <ServiceIcon
                     name={s.icon}
@@ -64,6 +75,7 @@ export function ServicesGrid({
                   </span>
                   <ArrowRightIcon className="h-5 w-5 text-ember-500 transition-transform group-hover:translate-x-1" />
                 </span>
+                </div>
               </Link>
             </li>
           ))}

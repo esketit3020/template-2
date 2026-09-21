@@ -396,3 +396,13 @@ html[data-site-style="architectural"] .site-hero-bottom { background: #101e19; }
   html[data-site-style="architectural"] .site-hero-art { inset: 0; opacity: .3; }
   html[data-site-style="architectural"] .site-hero-scrim { background: linear-gradient(90deg,#20382d,rgba(32,56,45,.65)); }
 }
+
+/* Preview imagery can be switched independently of the site-wide colour/layout style. */
+.photo-only { display: none; }
+html[data-site-media="photos"] .photo-only { display: block; }
+html[data-site-media="photos"] .illustration-only { display: none; }
+html[data-site-media="illustrations"] .photo-only { display: none; }
+html[data-site-media="illustrations"] .illustration-only { display: block; }
+html[data-site-media="photos"] .site-hero-art { background: var(--color-ink-950); }
+.site-hero-credit { max-width: min(24rem, 78vw); }
+@media (max-width: 767px) { .site-hero-credit { bottom: 5.5rem; font-size: .625rem; } }

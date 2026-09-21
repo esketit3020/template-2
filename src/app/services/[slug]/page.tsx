@@ -9,7 +9,7 @@ import { faqsForService } from "@/lib/faqs";
 import { serviceSchema, breadcrumbSchema, faqSchema, jsonLdProps } from "@/lib/schema";
 import { PageHeader, QuoteCta } from "@/components/Blocks";
 import { QuoteForm } from "@/components/QuoteForm";
-import { RoofPlate } from "@/components/RoofPlate";
+import { ProjectPreviewMedia } from "@/components/ProjectPreviewMedia";
 import { ReviewCard } from "@/components/Reviews";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import {
@@ -230,12 +230,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 {serviceProjects.map((p) => (
                   <article key={p.slug} className="card card-hover overflow-hidden">
                     <div className="aspect-[16/9] bg-ink-100">
-                      <RoofPlate
-                        hue={p.plate.hue}
-                        profile={p.plate.profile}
-                        label={`${p.serviceName} in ${p.suburb}`}
-                        className="h-full w-full"
-                      />
+                      <ProjectPreviewMedia project={p} />
                     </div>
                     <div className="p-5">
                       <div className="flex items-center gap-2">

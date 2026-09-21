@@ -9,7 +9,7 @@ import { reviews } from "@/lib/reviews";
 import { suburbServiceSchema, breadcrumbSchema, jsonLdProps } from "@/lib/schema";
 import { PageHeader, QuoteCta } from "@/components/Blocks";
 import { QuoteForm } from "@/components/QuoteForm";
-import { RoofPlate } from "@/components/RoofPlate";
+import { ProjectPreviewMedia } from "@/components/ProjectPreviewMedia";
 import { ReviewCard } from "@/components/Reviews";
 import {
   MapPinIcon,
@@ -167,12 +167,7 @@ export default async function SuburbDetailPage({ params }: Props) {
                     {suburbProjects.map((p) => (
                       <article key={p.slug} className="card card-hover overflow-hidden">
                         <div className="aspect-[16/9] bg-ink-100">
-                          <RoofPlate
-                            hue={p.plate.hue}
-                            profile={p.plate.profile}
-                            label={`${p.serviceName} in ${p.suburb}`}
-                            className="h-full w-full"
-                          />
+                          <ProjectPreviewMedia project={p} />
                         </div>
                         <div className="p-5">
                           <span className="chip bg-ember-100 text-ember-700 text-xs">

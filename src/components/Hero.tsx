@@ -11,6 +11,7 @@
 import Link from "next/link";
 import { business, yearsTrading } from "@/lib/business";
 import { HeroPlate } from "./RoofPlate";
+import { heroPhoto } from "@/lib/demoPhotos";
 import { ArrowRightIcon, CheckIcon, PhoneIcon, StarIcon } from "./Icons";
 
 export function Hero() {
@@ -18,11 +19,18 @@ export function Hero() {
     <section className="site-hero relative overflow-hidden bg-ink-900 text-white">
       {/* Artwork — see RoofPlate.tsx header on why this is an illustration. */}
       <div className="site-hero-art absolute inset-0" aria-hidden="true">
-        <HeroPlate className="h-full w-full object-cover" />
+        <div className="illustration-only h-full w-full"><HeroPlate className="h-full w-full object-cover" /></div>
+        {/* Real licensed photo, clearly disclosed as a template preview asset. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={heroPhoto.src} alt="" aria-hidden="true" width={1920} height={1080}
+          fetchPriority="high" decoding="async" className="photo-only site-hero-photograph absolute inset-0 h-full w-full object-cover" />
         {/* Scrim: keeps AA contrast on the copy over the artwork. */}
         <div className="site-hero-scrim absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/92 to-ink-950/35 lg:to-transparent" />
       </div>
 
+      <p className="photo-only site-hero-credit absolute bottom-20 right-4 z-10 rounded bg-ink-950/85 px-2 py-1 text-xs text-white">
+        Preview photo — <a href={heroPhoto.source} target="_blank" rel="noopener noreferrer" className="underline">{heroPhoto.credit}</a> · not this business
+      </p>
       <div className="shell relative">
         <div className="site-hero-copy max-w-2xl py-14 md:py-20 lg:py-28">
           {/* Where — stated first, because half of local trade searches are "near me". */}
