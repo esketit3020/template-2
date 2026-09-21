@@ -24,8 +24,6 @@ export type Project = {
   serviceName: string;
   /** Month completed. */
   completed: string;
-  /** Value band rather than exact price — the client asked not to publish job prices. */
-  valueBand: string;
   duration: string;
   summary: string;
   /** The interesting detail — what made this job non-obvious. */
@@ -44,7 +42,6 @@ export const projects: Project[] = [
     serviceSlug: "roof-restoration",
     serviceName: "Roof Restoration",
     completed: "August 2026",
-    valueBand: "$6,000 – $9,000",
     duration: "4 days",
     summary:
       "Full re-bed and re-point of every ridge cap, 62 broken tiles replaced, and two coats of AcraTex membrane over an original 1938 terracotta roof.",
@@ -60,7 +57,6 @@ export const projects: Project[] = [
     serviceSlug: "roof-replacement",
     serviceName: "Roof Replacement",
     completed: "July 2026",
-    valueBand: "$28,000 – $34,000",
     duration: "11 days",
     summary:
       "Complete strip of concrete tile, batten replacement where rot was found, new sarking and insulation, and Colorbond Ultra Custom Orb in Basalt.",
@@ -76,7 +72,6 @@ export const projects: Project[] = [
     serviceSlug: "roof-repairs",
     serviceName: "Roof Repairs & Leak Detection",
     completed: "June 2026",
-    valueBand: "$340 – $800",
     duration: "1 day",
     summary:
       "Two previous roofers had sealed the wrong spot. Hose testing found water tracking three metres along a batten from a cracked valley iron.",
@@ -92,7 +87,6 @@ export const projects: Project[] = [
     serviceSlug: "guttering-downpipes",
     serviceName: "Gutters & Downpipes",
     completed: "May 2026",
-    valueBand: "$4,000 – $6,000",
     duration: "2 days",
     summary:
       "84 metres of Colorbond hi-front gutter, Colorbond fascia covers over rotten timber, and four extra downpipes added.",
@@ -108,7 +102,6 @@ export const projects: Project[] = [
     serviceSlug: "metal-roofing",
     serviceName: "Colorbond® Metal Roofing",
     completed: "April 2026",
-    valueBand: "$40,000+",
     duration: "3 weeks, staged",
     summary:
       "620m² Klip-Lok re-roof with new box gutters and rainheads, staged in sections so the centre never closed a room.",
@@ -124,7 +117,6 @@ export const projects: Project[] = [
     serviceSlug: "roof-painting",
     serviceName: "Roof Painting",
     completed: "March 2026",
-    valueBand: "$4,000 – $6,000",
     duration: "3 days",
     summary:
       "Chalked and lichen-covered 1970s concrete tile, cleaned, treated, sealed and recoated in AcraTex Surfmist to cut upstairs heat.",
@@ -140,7 +132,6 @@ export const projects: Project[] = [
     serviceSlug: "roof-ventilation",
     serviceName: "Ventilation & Skylights",
     completed: "March 2026",
-    valueBand: "$2,000 – $4,000",
     duration: "2 days",
     summary:
       "One Velux fixed skylight into a windowless hallway plus two whirlybirds, with new sarking dressed around every penetration.",

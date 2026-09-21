@@ -37,9 +37,7 @@ export function Gallery({
             <p className="eyebrow">Recent projects</p>
             <h2 className="h-section mt-3">{heading}</h2>
             <p className="lede mt-4">
-              Example job descriptions with licensed preview photography (not photos of the named jobs). Replace these with real client projects before publishing. Value bands
-              rather than exact prices — every roof is different, and we would rather quote yours
-              than have you compare it to someone else&rsquo;s.
+              Example job descriptions with licensed preview photography (not photos of the named jobs). Replace these with real client projects before publishing. Every roof is different, so ask us for a quote tailored to yours.
             </p>
           </div>
           {limit && (
@@ -120,11 +118,7 @@ export function Gallery({
                     {p.summary}
                   </p>
 
-                  <dl className="mt-4 grid grid-cols-2 gap-3 border-t border-ink-100 pt-4 text-[0.8125rem]">
-                    <div>
-                      <dt className="text-ink-500">Value band</dt>
-                      <dd className="mt-0.5 font-semibold text-ink-900">{p.valueBand}</dd>
-                    </div>
+                  <dl className="mt-4 border-t border-ink-100 pt-4 text-[0.8125rem]">
                     <div>
                       <dt className="text-ink-500">On site</dt>
                       <dd className="mt-0.5 inline-flex items-center gap-1 font-semibold text-ink-900">

@@ -7,9 +7,9 @@ import { breadcrumbSchema, faqSchema, jsonLdProps } from "@/lib/schema";
 import { PhoneIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Costs, Warranties & Insurance | Ironbark Roofing",
+  title: "Frequently Asked Questions | Roof Restorations & Warranties | Ironbark Roofing",
   description:
-    "Honest answers to the questions we get asked most: restoration costs in Brisbane, 25-year warranties, and subcontractor policies. QBCC 15234876.",
+    "Honest answers to the questions we get asked most: roof restorations in Brisbane, 25-year warranties, and subcontractor policies. QBCC 15234876.",
   alternates: { canonical: "/faq" },
 };
 
@@ -27,7 +27,7 @@ export default function FaqPage() {
       <PageHeader
         eyebrow="Help & Advice"
         title="Frequently asked questions about roofing on the Brisbane southside."
-        intro="Straightforward answers about pricing, restoration longevity, and how we work — sourced directly from customer enquiries to our office."
+        intro="Straightforward answers about roofing options, restoration longevity, and how we work — sourced directly from customer enquiries to our office."
         breadcrumbs={breadcrumbs}
       />
 

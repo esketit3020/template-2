@@ -3,8 +3,8 @@
  * "3–5 step visual process (enquiry → inspection → quote → job → follow-up)."
  * Purpose per the SOP: reduce purchase anxiety on a high-ticket, trust-dependent buy.
  *
- * The client's average job is ~$8,500 (onboarding §1), which is exactly the bracket
- * where process transparency does the most work.
+ * Clear stages and an individual written quote help homeowners understand the work
+ * before they commit.
  */
 
 import Link from "next/link";

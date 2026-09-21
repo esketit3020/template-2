@@ -81,15 +81,9 @@ export default async function ServiceDetailPage({ params }: Props) {
         breadcrumbs={breadcrumbs}
       >
         <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
-          {service.fromPrice ? (
-            <span className="chip bg-ember-500/20 text-ember-300 font-semibold text-base px-4 py-1.5 border border-ember-500/40">
-              From {service.fromPrice}
-            </span>
-          ) : (
-            <span className="chip bg-white/10 text-white font-semibold text-base px-4 py-1.5 border border-white/20">
-              Fixed written quote per job
-            </span>
-          )}
+          <span className="chip bg-white/10 text-white font-semibold text-base px-4 py-1.5 border border-white/20">
+            Custom written quote after inspection
+          </span>
           <span className="chip bg-white/10 text-ink-200">
             <ShieldIcon className="h-4 w-4 text-ember-400" />
             {service.warrantyYears}-year workmanship warranty
@@ -110,17 +104,16 @@ export default async function ServiceDetailPage({ params }: Props) {
               <div className="rounded-xl border border-ink-100 bg-white p-6 sm:p-8 shadow-plate">
                 <h2 className="h-section text-ink-900">How we approach {service.shortName}</h2>
                 <p className="mt-4 text-lg leading-relaxed text-ink-700">{service.intro}</p>
-
-                {/* Pricing detail box */}
+                {/* Scope and quoting process */}
                 <div className="mt-8 rounded-lg border-l-4 border-ember-500 bg-cream p-5">
                   <h3 className="font-display text-base font-bold uppercase tracking-wider text-ink-900">
-                    Pricing &amp; Scope Clarity
+                    Clear scope, tailored quote
                   </h3>
                   <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-700">
-                    {service.priceNote}
+                    Every roof is different. We inspect its condition, access and the work required, explain your options in plain English, and give you an itemised written quote.
                   </p>
                   <p className="mt-2 text-xs text-ink-500">
-                    Every inspection includes a drone condition report and fixed-price written quotation valid for 30 days. No surprise variations.
+                    Your inspection includes a photo condition report and a written quotation valid for 30 days.
                   </p>
                 </div>
 
@@ -240,7 +233,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                       <h3 className="h-card mt-2 text-ink-900">{p.title}</h3>
                       <p className="mt-2 text-sm text-ink-600">{p.summary}</p>
                       <div className="mt-4 border-t border-ink-100 pt-3 text-xs text-ink-500 flex justify-between">
-                        <span>Value: <strong>{p.valueBand}</strong></span>
+                        <span>Completed {p.completed}</span>
                         <span>Duration: <strong>{p.duration}</strong></span>
                       </div>
                     </div>
@@ -273,7 +266,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               <FaqAccordion
                 items={serviceFaqs}
                 heading={`Frequently asked questions: ${service.shortName}`}
-                intro="Specific questions regarding scope, insurer claims, and costs."
+                intro="Questions about scope, materials, suitability and how we work."
                 showCta={false}
               />
             </div>
@@ -283,7 +276,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       <QuoteCta
         defaultService={service.slug}
-        heading={`Get a fixed price on ${service.shortName}`}
+        heading={`Request a quote for ${service.shortName}`}
         intro="Tell us your suburb and contact details. We'll arrange an inspection, take comprehensive photos, and provide an itemised written quote within 48 hours."
       />
     </>

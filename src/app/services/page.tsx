@@ -9,7 +9,7 @@ import { breadcrumbSchema, jsonLdProps } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Roofing Services Brisbane Southside | Restorations, Repairs & Re-Roofing",
   description:
-    "Comprehensive roofing services across the Brisbane southside. Restorations from $4,800, leak repairs from $340, Colorbond metal re-roofing, gutters. QBCC 15234876.",
+    "Comprehensive roofing services across the Brisbane southside. Restorations, leak repairs, Colorbond metal re-roofing and gutters. QBCC 15234876.",
   alternates: { canonical: "/services" },
 };
 
@@ -26,7 +26,7 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="Our Services"
         title="Roofing services on the Brisbane southside, done once and done properly."
-        intro={`Seven dedicated services, all delivered by employed Ironbark tradespeople — never subbies. From $340 leak repairs to complete tile-to-Colorbond transformations, backed by ${yearsTrading()} years of local experience.`}
+        intro={`Seven dedicated services, all delivered by employed Ironbark tradespeople — never subbies. From leak repairs to complete tile-to-Colorbond transformations, backed by ${yearsTrading()} years of local experience.`}
         breadcrumbs={breadcrumbs}
       >
         <TrustStrip className="mt-8 text-ink-300" />
@@ -61,26 +61,12 @@ export default function ServicesPage() {
 
                   <div className="mt-6 rounded-lg bg-cream-dark p-4">
                     <div className="flex flex-wrap items-center justify-between gap-2">
-                      <span className="font-display text-lg font-bold text-ink-900">
-                        {s.fromPrice ? (
-                          <>
-                            <span className="text-xs font-medium uppercase tracking-wider text-ink-500">
-                              Pricing:{" "}
-                            </span>
-                            from {s.fromPrice}
-                          </>
-                        ) : (
-                          <span className="text-sm font-semibold text-ink-700">
-                            Fixed price via custom quote
-                          </span>
-                        )}
-                      </span>
+                      <span className="font-display text-base font-bold text-ink-900">Request a tailored quote</span>
                       <span className="inline-flex items-center gap-1 text-xs text-ink-600">
                         <ClockIcon className="h-3.5 w-3.5 text-ink-500" />
                         {s.duration}
                       </span>
                     </div>
-                    <p className="mt-1.5 text-xs text-ink-600">{s.priceNote}</p>
                   </div>
 
                   <div className="mt-6">
@@ -103,7 +89,7 @@ export default function ServicesPage() {
                     href={`/services/${s.slug}`}
                     className="btn btn-primary"
                   >
-                    View service details &amp; pricing
+                    Explore this service
                     <ArrowRightIcon className="h-4 w-4" />
                   </Link>
                   <Link

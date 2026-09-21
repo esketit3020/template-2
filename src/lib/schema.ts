@@ -29,7 +29,6 @@ export function organisationSchema() {
     email: business.email,
     foundingDate: String(business.foundedYear),
     slogan: business.tagline,
-    priceRange: "$$",
     currenciesAccepted: "AUD",
     paymentAccepted: "Cash, EFT, Credit Card",
 
@@ -97,16 +96,6 @@ export function organisationSchema() {
           description: s.teaser,
           url: `${siteUrl}/services/${s.slug}`,
         },
-        ...(s.fromPrice
-          ? {
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                priceCurrency: "AUD",
-                minPrice: Number(s.fromPrice.replace(/[^0-9.]/g, "")),
-                valueAddedTaxIncluded: true,
-              },
-            }
-          : {}),
       })),
     },
 
@@ -170,22 +159,6 @@ export function serviceSchema(slug: string) {
         itemOffered: { "@type": "Service", name: item },
       })),
     },
-    ...(s.fromPrice
-      ? {
-          offers: {
-            "@type": "Offer",
-            priceCurrency: "AUD",
-            price: Number(s.fromPrice.replace(/[^0-9.]/g, "")),
-            priceSpecification: {
-              "@type": "PriceSpecification",
-              priceCurrency: "AUD",
-              minPrice: Number(s.fromPrice.replace(/[^0-9.]/g, "")),
-              valueAddedTaxIncluded: true,
-              description: s.priceNote,
-            },
-          },
-        }
-      : {}),
   };
 }
 

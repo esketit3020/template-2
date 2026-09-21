@@ -133,11 +133,6 @@ export function Header() {
                                 className="flex items-baseline justify-between gap-3 px-4 py-2.5 text-[0.9375rem] hover:bg-cream"
                               >
                                 <span className="font-medium text-ink-900">{s.shortName}</span>
-                                {s.fromPrice && (
-                                  <span className="shrink-0 text-xs text-ink-500">
-                                    from {s.fromPrice}
-                                  </span>
-                                )}
                               </Link>
                             </li>
                           ))}

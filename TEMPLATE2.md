@@ -25,3 +25,7 @@ Built for Australian roof repairs, tile and metal roof restoration, Colorbond re
 The preview toolbar has an independent **Real photos / Illustrations** choice, saved alongside the selected design. Photo mode is the default. It uses real (non-AI) licensed Unsplash photographs in the hero, service cards, service detail headers and project preview cards. **They are illustrative assets, not Ironbark's own projects or workforce**; the project cards are visibly labelled, with photographer/source links in `src/lib/demoPhotos.ts`. This is for design preview only. Do not present sample photography or the example Ironbark case studies as verified client work.
 
 Replace `heroPhoto`, `servicePhotos` and each `project.photo` with genuine authorised client photography before launching. For project photos, provide the actual `before`, `after` and `alt` paths in `src/lib/projects.ts`; the gallery prioritises client images automatically. Keep the illustrative label until replaced. Confirm third-party photo licence terms if commercialising an unchanged demo.
+
+## No published pricing
+
+This template deliberately omits prices, starting rates and project value bands from public-facing pages, SEO metadata and JSON-LD schema. Calls to action encourage a free inspection and an individual itemised written quote. Keep any client-specific prices out of service titles, FAQs, example reviews and project descriptions unless the website owner later opts in to publishing them.

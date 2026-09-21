@@ -142,7 +142,7 @@ export default async function SuburbDetailPage({ params }: Props) {
                       </div>
                       <div className="mt-4 flex items-center justify-between border-t border-ink-100 pt-3">
                         <span className="text-xs font-semibold text-ink-900">
-                          {s.fromPrice ? `from ${s.fromPrice}` : "Quoted per job"}
+                          Custom quote after inspection
                         </span>
                         <Link
                           href={`/services/${s.slug}`}
@@ -175,9 +175,6 @@ export default async function SuburbDetailPage({ params }: Props) {
                           </span>
                           <h4 className="h-card mt-2 text-ink-900">{p.title}</h4>
                           <p className="mt-2 text-xs text-ink-600">{p.summary}</p>
-                          <p className="mt-3 border-t border-ink-100 pt-3 text-xs text-ink-500">
-                            <strong>Value band:</strong> {p.valueBand}
-                          </p>
                         </div>
                       </article>
                     ))}

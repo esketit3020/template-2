@@ -32,7 +32,7 @@ export const reviews: Review[] = [
     service: "Roof Restoration",
     serviceSlug: "roof-restoration",
     body:
-      "Dave came out and told us our roof did not need the full restoration two other companies had quoted for — it needed about $900 of pointing on the western ridge and nothing else. He could have taken the $7,000. We had him back eighteen months later for the full job when it was actually due, and we have recommended him to half the street.",
+      "Dave came out and told us our roof did not need the full restoration two other companies had quoted for — it only needed pointing on the western ridge. He could have sold us the bigger job. We had him back eighteen months later for the full job when it was actually due, and we have recommended him to half the street.",
   },
   {
     author: "Geoff & Carol P.",
@@ -52,7 +52,7 @@ export const reviews: Review[] = [
     service: "Roof Repairs & Leak Detection",
     serviceSlug: "roof-repairs",
     body:
-      "Two other roofers had 'fixed' a leak above our ensuite and it came back both times. Sam spent an hour in the roof cavity with a hose running and found it was tracking three metres along a batten from a cracked valley. Fixed properly for $480 and it has been through two wet seasons since.",
+      "Two other roofers had 'fixed' a leak above our ensuite and it came back both times. Sam spent an hour in the roof cavity with a hose running and found it was tracking three metres along a batten from a cracked valley. Fixed properly and it has been through two wet seasons since.",
   },
   {
     author: "Anthony D.",

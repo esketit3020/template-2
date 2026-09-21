@@ -13,7 +13,7 @@ import { ServiceIcon, ArrowRightIcon } from "./Icons";
 
 export function ServicesGrid({
   heading = "What we do",
-  intro = "Seven services, each with its own page — so you can read exactly what is included and what it costs before you ring anyone.",
+  intro = "Seven services, each with its own page — explore what is involved, then request a quote tailored to your roof.",
   showAllLink = true,
 }: {
   heading?: string;
@@ -59,20 +59,7 @@ export function ServicesGrid({
                 </p>
 
                 <span className="mt-5 flex items-center justify-between border-t border-ink-100 pt-4">
-                  <span className="font-display text-[1.0625rem] font-bold text-ink-900">
-                    {s.fromPrice ? (
-                      <>
-                        <span className="text-[0.75rem] font-semibold uppercase tracking-wider text-ink-500">
-                          from{" "}
-                        </span>
-                        {s.fromPrice}
-                      </>
-                    ) : (
-                      <span className="text-[0.9375rem] font-semibold text-ink-600">
-                        Quoted per job
-                      </span>
-                    )}
-                  </span>
+                  <span className="font-display text-[0.9375rem] font-semibold text-ink-700">Explore service</span>
                   <ArrowRightIcon className="h-5 w-5 text-ember-500 transition-transform group-hover:translate-x-1" />
                 </span>
                 </div>

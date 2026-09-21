@@ -15,7 +15,7 @@ export type Faq = {
 export const faqs: Faq[] = [
   {
     q: "How much does a roof restoration cost in Brisbane?",
-    a: "A standard single-storey tile roof up to about 200m² starts at $4,800 for a full restoration — that is the clean, the moss treatment, every ridge cap re-bedded and re-pointed, broken tiles replaced, and two coats of membrane. Two-storey homes, steep pitches, difficult access and badly deteriorated roofs cost more. Most of the restorations we do land between $4,800 and $9,500. We will not give you a figure over the phone and call it a quote: you get a fixed written price after we have actually been up there and photographed it.",
+    a: "Every roof is different. We inspect the tile or metal condition, access, pitch and work required, then provide an itemised written quote tailored to your roof. A restoration may include cleaning, re-bedding, re-pointing, replacing broken tiles and recoating where appropriate. Book a free inspection to find out what your roof actually needs.",
     serviceSlug: "roof-restoration",
   },
   {

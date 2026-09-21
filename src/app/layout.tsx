@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s | Ironbark Roofing Co.",
   },
   description:
-    "QBCC-licensed Brisbane southside roofers since 2009. Roof restorations from $4,800, repairs, re-roofing and Colorbond metal roofing. 4.9★ from 187 reviews. 25-year workmanship warranty.",
+    "QBCC-licensed Brisbane southside roofers since 2009. Roof restorations, repairs, re-roofing and Colorbond metal roofing. 4.9★ from 187 reviews. 25-year workmanship warranty.",
   applicationName: business.name,
   authors: [{ name: business.name }],
   generator: "Next.js",
