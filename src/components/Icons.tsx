@@ -54,15 +54,6 @@ export const serviceIcons: Record<IconName, (p: Props) => React.ReactElement> = 
       <circle cx="12" cy="17.6" r="2.2" />
     </Svg>
   ),
-  storm: (p) => (
-    <Svg {...p}>
-      <path d="M6 12.5a3.5 3.5 0 0 1 .5-7 5 5 0 0 1 9.4-1.2A4 4 0 0 1 20 12.5" />
-      <path d="M6 12.5h14" />
-      <path d="M13 15.5 9.5 20h4L10.5 24" />
-      <path d="M17.5 16v3" />
-      <path d="M6.5 16v2" />
-    </Svg>
-  ),
   gutter: (p) => (
     <Svg {...p}>
       <path d="M3 8 12 3l9 5" />
